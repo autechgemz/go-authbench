@@ -1,0 +1,30 @@
+{
+	"name": "go-authbench",
+	"image": "mcr.microsoft.com/vscode/devcontainers/go:1.23-bookworm",
+	"features": {
+			"ghcr.io/devcontainers/features/git:1": {
+					"version": "latest"
+			},
+			"ghcr.io/devcontainers/features/github-cli:1": {
+					"version": "latest"
+			},
+			"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+					"version": "latest"
+			}
+	},
+	"runArgs": [
+		"--init",
+		"--name=go-authbench"
+	],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"golang.go"
+			]
+		}
+	},
+	"remoteEnv": {
+		"TZ": "Asia/Tokyo"
+	},
+	"remoteUser": "vscode"
+}
