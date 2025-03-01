@@ -54,4 +54,24 @@ Requests: 10, Concurrency: 10, FailRate: 0.00, Repeat: 1, Interval: 1.0 sec
 Total time: 7.679446ms
 
 Benchmark completed. Average execution time: 7.679446ms
+
+$ go run authbench.go -h localhost -p 8080 -user "testuser" -pass "testpass" -r 0.1 -R 1 -i 1 -n 10 -c 10
+Starting HTTP Benchmarking...
+Target URL: http://localhost:8080/
+Requests: 10, Concurrency: 10, FailRate: 0.10, Repeat: 1, Interval: 1.0 sec
+
+[Run 1/1] Starting benchmark...
+[Worker 9] Status: 200 Time: 5.226413ms
+[Worker 5] Status: 200 Time: 5.36566ms
+[Worker 8] Status: 200 Time: 5.348143ms
+[Worker 7] Status: 200 Time: 5.365606ms
+[Worker 0] Status: 200 Time: 5.48076ms
+[Worker 1] Status: 200 Time: 5.594192ms
+[Worker 2] Status: 200 Time: 5.955782ms
+[Worker 6] Status: 200 Time: 6.975035ms
+[Worker 4] Status: 401 Time: 10.189197ms
+[Worker 3] Status: 401 Time: 9.834802ms
+Total time: 11.85965ms
+
+Benchmark completed. Average execution time: 11.85965ms
 ```
